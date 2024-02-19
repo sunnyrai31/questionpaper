@@ -54,15 +54,6 @@ const QuestionList = () => {
 
 
     }
-    // useEffect(() => {
-    //     return () => {
-    //         startTimer();
-    //         if(timer === 0){
-    //             clearInterval(timerId);
-    //         }
-    //     };
-    // }, [timer]);
-
 
     const resetForm = () => {
         setSelectedAns(new Array(QuestionListArr.length).fill(null));
@@ -78,7 +69,7 @@ const QuestionList = () => {
             fail: 'red'
         }
         return (
-            <Fragment>
+            <Fragment className="d-flex card " >
                 <h1> Question Quiz!</h1>
                 <h4>timer : {timer}</h4>
                 <Fragment>

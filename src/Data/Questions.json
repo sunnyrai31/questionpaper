@@ -1,0 +1,22 @@
+[
+  {
+    "text": "world fasted animal ?",
+    "options": ["Chitah", "falcon"],
+    "correctAns": "falcon"
+  },
+  {
+    "text": "World largest animal ?",
+    "options": ["Jiraf", "elephant", "whale"],
+    "correctAns": "whale"
+  },
+  {
+    "text": "World fasted bike ?",
+    "options": ["BMW", "Kawasaki H2R"],
+    "correctAns": "Kawasaki H2R"
+  },
+  {
+    "text": "World fasted Man ?",
+    "options": ["Bolt", "Usain"],
+    "correctAns": "Bolt"
+  }
+]
