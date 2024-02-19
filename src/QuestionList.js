@@ -1,0 +1,130 @@
+import react, {Fragment, useEffect, useRef, useState} from 'react';
+
+const QuestionList = () => {
+
+    const QuestionListArr = [
+        {
+            text: "world fasted animal ?",
+            options: ['Chitah', 'falcon'],
+            correctans: 'falcon'
+        },
+        {
+            text: "World largest animal ?",
+            options: ['Jiraf', 'elephant', 'whale'],
+            correctans: 'whale'
+        },
+        {
+            text: "World fasted bike ?",
+            options: ['BMW', 'Kawasaki H2R'],
+            correctans: 'Kawasaki H2R'
+        }
+    ];
+    const [selectedAns, setSelectedAns] = useState(new Array(QuestionListArr.length).fill(null));
+    const [score, setScore] = useState(0);
+    const [showResult, setShowResult] = useState(false)
+    const [timer, setTimer] = useState(120)
+    const [timerId, setTimerId] = useState(0);
+
+
+
+    const handleOptionChange = (index, value) =>{
+        const newSelectedAnswers = [...selectedAns];
+        newSelectedAnswers[index] = value;
+        setSelectedAns(newSelectedAnswers);
+    }
+    const calculateScore = (e) =>{
+        setShowResult(true);
+        e.preventDefault();
+        QuestionListArr.map((question, index) =>{
+            if(question.correctans === selectedAns[index]) {
+                setScore((prevScore) => prevScore + 1);
+            }
+        })
+    }
+    const startTimer = () =>{
+        setTimerId(
+            setInterval(()=>{
+                const prev = timer;
+                const second = Math.floor(prev / 60);
+                console.log(second)
+                setTimer((prev)=> prev -1);
+            }, 1000)
+        )
+
+
+
+    }
+    // useEffect(() => {
+    //     return () => {
+    //         startTimer();
+    //         if(timer === 0){
+    //             clearInterval(timerId);
+    //         }
+    //     };
+    // }, [timer]);
+
+
+    const resetForm = () => {
+        setSelectedAns(new Array(QuestionListArr.length).fill(null));
+        setScore(0);
+        setShowResult(false);
+        setTimer(120);
+    };
+
+
+    const prepareQuestionList = () => {
+        const styleClasName = {
+          pass: 'green',
+            fail: 'red'
+        }
+        return (
+            <Fragment>
+                <h1> Question Quiz!</h1>
+                <h4>timer : {timer}</h4>
+                <Fragment>
+                    {showResult &&
+                    <h2 style = {{color: score >= 2 ? styleClasName.pass : styleClasName.fail}}> your result is {score}/{QuestionListArr.length}</h2>
+                    }
+                    </Fragment>
+
+                {QuestionListArr.map((questions, index) => {
+                   return  (
+                       <div key={`div-${index}`}>
+                           <span key={`span-${index}`}>
+                                <h2 key={`span-${index}`}> {index+1 }. {questions.text} </h2>
+                               {questions.options.map((item)=>{
+                                   return (
+                                       <Fragment key={`fragment-${index}`} >
+                                       <input type="radio"
+                                              key={`question${index}-${item}`}
+                                              name = {`question${index}-${item}`}
+                                              value={item}
+                                              checked = {selectedAns[index] === item }
+                                              onChange={() => handleOptionChange(index, item)}/>
+                                           <label> {item}</label>
+                                       </Fragment>
+                                       )
+                               })
+                               }
+                        </span>
+                       </div>
+                   )
+                })
+                }
+
+            </Fragment>
+        )
+    }
+
+
+    return (
+        <Fragment>
+            <form onSubmit={(e) => { calculateScore(e)}} onReset={()=>{resetForm()}}>
+            {prepareQuestionList()}
+                <button type="submit" disabled={showResult}>Submit</button>
+                <button type= "reset" >Reset</button>
+            </form>
+        </Fragment>
+    )
+}
+export default QuestionList;
