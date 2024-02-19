@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-
 import { AboutMsg } from "../Data/aboutMessage";
 const AboutComponent = () => {
   return (
