@@ -81,15 +81,24 @@ const QuestionList = () => {
                 {questions.options.map((item) => {
                   return (
                     <Fragment key={`fragment-${index}`}>
+                      {/* <input class="form-check-input" type="radio" name="radioGroup" id="option1" value="option1">
+    <label class="form-check-label" for="option1"></label> */}
                       <input
+                        className="form-check-input"
                         type="radio"
                         key={`question${index}-${item}`}
                         name={`question${index}-${item}`}
                         value={item}
+                        id={`question${index}-${item}`}
                         checked={selectedAns[index] === item}
                         onChange={() => handleOptionChange(index, item)}
                       />
-                      <label> {item}</label>
+                      <label
+                        class="form-check-label"
+                        for={`question${index}-${item}`}
+                      >
+                        {item}
+                      </label>
                     </Fragment>
                   );
                 })}
@@ -112,10 +121,18 @@ const QuestionList = () => {
         }}
       >
         {prepareQuestionList()}
-        <button type="submit" disabled={showResult}>
-          Submit
-        </button>
-        <button type="reset">Reset</button>
+        <Fragment>
+          <button
+            type="submit"
+            className="btn btn-primary m-2"
+            disabled={showResult}
+          >
+            Submit
+          </button>
+          <button type="reset" className="btn btn-secondary m-2">
+            Reset
+          </button>
+        </Fragment>
       </form>
     </Fragment>
   );
