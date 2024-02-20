@@ -20,9 +20,9 @@ const HeaderComponent = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
@@ -36,9 +36,9 @@ const HeaderComponent = () => {
               </li>
             </ul>
 
-            <div class="dropdown m-2" data-bs-theme="dark">
+            <div className="dropdown m-2" data-bs-theme="dark">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                className="btn btn-secondary dropdown-toggle"
                 type="button"
                 id="dropdownMenuButtonDark"
                 data-bs-toggle="dropdown"
@@ -47,25 +47,31 @@ const HeaderComponent = () => {
                 Interview Question
               </button>
               <ul
-                class="dropdown-menu"
+                className="dropdown-menu"
                 aria-labelledby="dropdownMenuButtonDark"
               >
                 <li>
                   <Link
-                    class="dropdown-item"
+                    className="dropdown-item"
                     to="/interviewQuestionSelectOnDemand"
                   >
                     Select opton on demand
                   </Link>
-                  <Link class="dropdown-item" to="/interviewQuestionsQuiz">
+                  <Link className="dropdown-item" to="/interviewQuestionsQuiz">
                     Question quiz
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    to="/interviewQuestionCounterApp"
+                  >
+                    Counter App
                   </Link>
                 </li>
               </ul>
             </div>
-            <div class="dropdown m-2" data-bs-theme="dark">
+            <div className="dropdown m-2" data-bs-theme="dark">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                className="btn btn-secondary dropdown-toggle"
                 type="button"
                 id="dropdownMenuButtonDark"
                 data-bs-toggle="dropdown"
@@ -75,12 +81,12 @@ const HeaderComponent = () => {
                 Hooks Example
               </button>
               <ul
-                class="dropdown-menu"
+                className="dropdown-menu"
                 aria-labelledby="dropdownMenuButtonDark"
               >
                 <li>
                   <Link
-                    class="dropdown-item"
+                    className="dropdown-item"
                     to="/hooksUsestate"
                     data-bs-toggle="tooltip"
                     data-bs-title="Disabled tooltip"

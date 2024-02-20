@@ -39,6 +39,11 @@ function App() {
             }
           ></Route>
           <Route
+            path="/interviewQuestionCounterApp"
+            element={<UseStateComponent></UseStateComponent>}
+          ></Route>
+          {/* interviewQuestionCounterApp */}
+          <Route
             path="/hooksUsestate"
             element={<UseStateComponent></UseStateComponent>}
           ></Route>
