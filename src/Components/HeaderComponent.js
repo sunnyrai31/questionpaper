@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { QuestionDropdown } from "../Question";
+import { HooksDropdown } from "../Hooks";
 
 const HeaderComponent = () => {
   return (
@@ -30,92 +32,11 @@ const HeaderComponent = () => {
                 </Link>
               </li>
             </ul>
+            {/* TODO- Maybe Question and hooks dropdown can go to normal component hirarchy*/}
             {/* Interview Question Example dropdown starts here */}
-            <div className="dropdown m-2" data-bs-theme="dark">
-              <button
-                className="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButtonDark"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Interview Question
-              </button>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="dropdownMenuButtonDark"
-              >
-                <li>
-                  <Link className="dropdown-item" to="/SelectOnDemand">
-                    Select opton on demand
-                  </Link>
-                  <Link className="dropdown-item" to="/QuestionQuiz">
-                    Question quiz
-                  </Link>
-                  <Link className="dropdown-item" to="/UseState">
-                    Counter App
-                  </Link>
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      to="/hooksUseStateCustom"
-                      data-bs-toggle="tooltip"
-                      data-bs-title="Disabled tooltip"
-                    >
-                      use state hooks example
-                    </Link>
-                  </li>
-                </li>
-              </ul>
-            </div>
+            <QuestionDropdown></QuestionDropdown>
             {/* Hooks example dropdown starts here */}
-            <div className="dropdown m-2" data-bs-theme="dark">
-              <button
-                className="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButtonDark"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                data-bs-title="this section contain - all the hooks with thier example"
-              >
-                Hooks Example
-              </button>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="dropdownMenuButtonDark"
-              >
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/hooksUsestate"
-                    data-bs-toggle="tooltip"
-                    data-bs-title="Disabled tooltip"
-                  >
-                    use state hooks example
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/hooksUseStateCustom"
-                    data-bs-toggle="tooltip"
-                    data-bs-title="Disabled tooltip"
-                  >
-                    custom hook- use state custom hooks example
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/hooksUseEffect"
-                    data-bs-toggle="tooltip"
-                    data-bs-title="Disabled tooltip"
-                  >
-                    use Effect on counter
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <HooksDropdown></HooksDropdown>
           </div>
         </div>
       </nav>
