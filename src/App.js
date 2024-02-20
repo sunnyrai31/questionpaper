@@ -6,7 +6,7 @@ import InterviewQuestionSelectOnDemand from "./Components/InterviewQuestionSelec
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AboutComponent from "./Components/AboutComponent";
 import UseStateComponent from "./Hooks/UseStateHook";
-import UseStateCustomHookComponent from "./Hooks/UseStateCustom";
+import UseStateCustomHookComponent from "./Hooks/UseStateCustomHook";
 import { useEffect } from "react";
 
 function App() {
