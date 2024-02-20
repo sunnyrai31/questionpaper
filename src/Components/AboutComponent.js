@@ -3,18 +3,13 @@ import { AboutMsg } from "../Data/aboutMessage";
 const AboutComponent = () => {
   return (
     <div id="#aboutPage">
-      {/* <span className="d-flex" style={{}}>
-        <label style={{ fontFamily: "monospace", fontSize: "large" }}>
-          {AboutMsg}
-        </label>
-      </span> */}
       <header>
-        <h1>About InterviewViewPrep</h1>
+        <h1>About Question paper</h1>
         <hr />
       </header>
 
       <section>
-        <h2>Welcome to InterviewViewPrep</h2>
+        {/* <h2>Welcome to Question paper</h2> */}
         <p>
           Your go-to platform for mastering React concepts and JavaScript skills
           in a hands-on and interactive way! Our mission is to provide a dynamic
@@ -58,7 +53,7 @@ const AboutComponent = () => {
       <hr />
 
       <section>
-        <h3>How to Use InterviewViewPrep:</h3>
+        <h3>How to Use Question paper:</h3>
         <ol>
           <li>
             <strong>Explore React Concepts:</strong> Navigate through our
@@ -88,8 +83,8 @@ const AboutComponent = () => {
       <section>
         <p>
           Whether you're a beginner looking to grasp the fundamentals or an
-          experienced developer aiming to sharpen your skills, InterviewViewPrep
-          is your comprehensive resource for React and JavaScript interview
+          experienced developer aiming to sharpen your skills, Question paper is
+          your comprehensive resource for React and JavaScript interview
           preparation. Let's code your success together!
         </p>
       </section>
