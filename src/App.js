@@ -1,54 +1,29 @@
 import "./App.css";
 import HeaderComponent from "./Components/HeaderComponent";
-import WelcomeComponent from "./Components/WelcomeComponent";
-import { SelectOnDemand, QuestionQuiz } from "./Question";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import AboutComponent from "./Components/AboutComponent";
-import { UseStateHook, UseEffectHook, UseStateCustomHook } from "./Hooks";
+import { BrowserRouter as Router } from "react-router-dom";
+
 import { useEffect } from "react";
+import Routing from "./Routing";
 
 function App() {
   useEffect(() => {
     // document.title = process.env.REACT_APP_TITLE;
   }, []);
+  // const routingDetails = [
+  //   { path: "/", componentName: WelcomeComponent },
+  //   { path: "/about", componentName: AboutComponent },
+  //   { path: "/QuestionQuiz", componentName: QuestionQuiz },
+  //   { path: "/SelectOnDemand", componentName: SelectOnDemand },
+  //   { path: "/UseState", componentName: UseStateHook },
+  //   { path: "/hooksUsestate", componentName: UseStateHook },
+  //   { path: "/hooksUseEffect", componentName: UseEffectHook },
+  //   { path: "/hooksUseStateCustom", componentName: UseStateCustomHook },
+  // ];
   return (
     <Router>
       <div className="App">
         <HeaderComponent></HeaderComponent>
-        <Routes>
-          <Route
-            path="/QuestionQuiz"
-            element={<QuestionQuiz></QuestionQuiz>}
-          ></Route>
-          <Route
-            path="/about"
-            element={<AboutComponent></AboutComponent>}
-          ></Route>
-          <Route
-            path="/"
-            element={<WelcomeComponent></WelcomeComponent>}
-          ></Route>
-          <Route
-            path="/SelectOnDemand"
-            element={<SelectOnDemand></SelectOnDemand>}
-          ></Route>
-          <Route
-            path="/UseState"
-            element={<UseStateHook></UseStateHook>}
-          ></Route>
-          <Route
-            path="/hooksUsestate"
-            element={<UseStateHook></UseStateHook>}
-          ></Route>
-          <Route
-            path="/hooksUseEffect"
-            element={<UseEffectHook></UseEffectHook>}
-          ></Route>
-          <Route
-            path="/hooksUseStateCustom"
-            element={<UseStateCustomHook></UseStateCustomHook>}
-          ></Route>
-        </Routes>
+        <Routing></Routing>
       </div>
     </Router>
   );
