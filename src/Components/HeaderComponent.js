@@ -6,9 +6,6 @@ const HeaderComponent = () => {
     <Fragment>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/questionPaper">
-            Question Paper
-          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -33,20 +30,66 @@ const HeaderComponent = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  className="nav-link"
-                  to="/interviewQuestionSelectOnDemand"
-                >
-                  InterviewQuestionSelect
-                </Link>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link" href="#">
                   Contact
                 </a>
               </li>
             </ul>
-            <button className="btn btn-primary">Choose File</button>
+
+            <div class="dropdown m-2" data-bs-theme="dark">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButtonDark"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Interview Question
+              </button>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="dropdownMenuButtonDark"
+              >
+                <li>
+                  <Link
+                    class="dropdown-item"
+                    to="/interviewQuestionSelectOnDemand"
+                  >
+                    Select opton on demand
+                  </Link>
+                  <Link class="dropdown-item" to="/interviewQuestionsQuiz">
+                    Question quiz
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown m-2" data-bs-theme="dark">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButtonDark"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-title="this section contain - all the hooks with thier example"
+              >
+                Hooks Example
+              </button>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="dropdownMenuButtonDark"
+              >
+                <li>
+                  <Link
+                    class="dropdown-item"
+                    to="/hooksUsestate"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="Disabled tooltip"
+                  >
+                    use state hooks example
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>

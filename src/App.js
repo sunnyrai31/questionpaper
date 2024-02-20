@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/upload" element={<FileUploader></FileUploader>}></Route>
           <Route
-            path="/questionPaper"
+            path="/interviewQuestionsQuiz"
             element={<QuestionList></QuestionList>}
           ></Route>
           <Route
