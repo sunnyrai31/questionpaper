@@ -38,3 +38,18 @@
     transform: rotate(360deg);
   }
 }
+
+#aboutPage section {
+  margin-bottom: 20px;
+}
+
+#aboutPage ul,
+#aboutPage ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#aboutPage li {
+  margin-bottom: 10px;
+}
