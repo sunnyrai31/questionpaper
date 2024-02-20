@@ -7,6 +7,7 @@ import WelcomeComponent from "./Components/WelcomeComponent";
 import InterviewQuestionSelectOnDemand from "./Components/InterviewQuestionSelectOnDemand";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AboutComponent from "./Components/AboutComponent";
+import UseStateComponent from "./Hooks/UseStateHook";
 import { useEffect } from "react";
 
 function App() {
@@ -36,6 +37,10 @@ function App() {
             element={
               <InterviewQuestionSelectOnDemand></InterviewQuestionSelectOnDemand>
             }
+          ></Route>
+          <Route
+            path="/hooksUsestate"
+            element={<UseStateComponent></UseStateComponent>}
           ></Route>
         </Routes>
       </div>
