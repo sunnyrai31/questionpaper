@@ -4,11 +4,7 @@ import WelcomeComponent from "./Components/WelcomeComponent";
 import { SelectOnDemand, QuestionQuiz } from "./Question";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AboutComponent from "./Components/AboutComponent";
-import {
-  UseStateHookExample,
-  UseEffectHook,
-  UseStateCustomHookComponent,
-} from "./Hooks";
+import { UseStateHook, UseEffectHook, UseStateCustomHook } from "./Hooks";
 import { useEffect } from "react";
 
 function App() {
@@ -37,12 +33,12 @@ function App() {
             element={<SelectOnDemand></SelectOnDemand>}
           ></Route>
           <Route
-            path="/interviewQuestionCounterApp"
-            element={<UseStateHookExample></UseStateHookExample>}
+            path="/UseState"
+            element={<UseStateHook></UseStateHook>}
           ></Route>
           <Route
             path="/hooksUsestate"
-            element={<UseStateHookExample></UseStateHookExample>}
+            element={<UseStateHook></UseStateHook>}
           ></Route>
           <Route
             path="/hooksUseEffect"
@@ -50,9 +46,7 @@ function App() {
           ></Route>
           <Route
             path="/hooksUseStateCustom"
-            element={
-              <UseStateCustomHookComponent></UseStateCustomHookComponent>
-            }
+            element={<UseStateCustomHook></UseStateCustomHook>}
           ></Route>
         </Routes>
       </div>

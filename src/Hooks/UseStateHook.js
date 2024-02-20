@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-const UseStateHookExample = () => {
+const UseStateHook = () => {
   const [counter, setCounter] = useState(0);
   const handleButtonClick = (type) => {
     type === "Add" ? setCounter(counter + 1) : setCounter(counter - 1);
@@ -22,4 +22,4 @@ const UseStateHookExample = () => {
     </Fragment>
   );
 };
-export default UseStateHookExample;
+export default UseStateHook;

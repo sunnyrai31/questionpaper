@@ -52,10 +52,7 @@ const HeaderComponent = () => {
                   <Link className="dropdown-item" to="/QuestionQuiz">
                     Question quiz
                   </Link>
-                  <Link
-                    className="dropdown-item"
-                    to="/interviewQuestionCounterApp"
-                  >
+                  <Link className="dropdown-item" to="/UseState">
                     Counter App
                   </Link>
                   <li>
@@ -104,7 +101,7 @@ const HeaderComponent = () => {
                     data-bs-toggle="tooltip"
                     data-bs-title="Disabled tooltip"
                   >
-                    use state custom hooks example
+                    custom hook- use state custom hooks example
                   </Link>
                 </li>
                 <li>
