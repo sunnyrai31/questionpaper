@@ -1,6 +1,15 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 const HooksDropdown = () => {
+  const hooksDropDownList = [
+    { text: "use state hooks example", to: "/hooksUsestate", title: "" },
+    {
+      text: "custom hook- use state custom hooks example",
+      to: "/hooksUseStateCustom",
+      title: "",
+    },
+    { text: "use Effect on counter", to: "/hooksUseEffect", title: "" },
+  ];
   return (
     <Fragment>
       <div className="dropdown m-2" data-bs-theme="dark">
@@ -15,36 +24,21 @@ const HooksDropdown = () => {
           Hooks Example
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/hooksUsestate"
-              data-bs-toggle="tooltip"
-              data-bs-title="Disabled tooltip"
-            >
-              use state hooks example
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/hooksUseStateCustom"
-              data-bs-toggle="tooltip"
-              data-bs-title="Disabled tooltip"
-            >
-              custom hook- use state custom hooks example
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="dropdown-item"
-              to="/hooksUseEffect"
-              data-bs-toggle="tooltip"
-              data-bs-title="Disabled tooltip"
-            >
-              use Effect on counter
-            </Link>
-          </li>
+          {hooksDropDownList.map((listItem, index) => {
+            return (
+              <li key={`hooks-item-${index}`}>
+                <Link
+                  key={`hooks-item-link-${index}`}
+                  className="dropdown-item"
+                  to={listItem.to}
+                  data-bs-toggle="tooltip"
+                  data-bs-title={listItem.title}
+                >
+                  {listItem.text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </Fragment>

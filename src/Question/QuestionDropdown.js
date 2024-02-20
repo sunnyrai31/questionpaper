@@ -2,6 +2,16 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const QuestionDropdown = () => {
+  const QuestionDropDownList = [
+    { text: "Select opton on demand", to: "/SelectOnDemand", title: "" },
+    {
+      text: "Question quiz",
+      to: "/QuestionQuiz",
+      title: "",
+    },
+    { text: "Counter App", to: "/UseState", title: "" },
+    { text: "use state hooks example", to: "hooksUseStateCustom", title: "" },
+  ];
   return (
     <Fragment>
       <div className="dropdown m-2" data-bs-theme="dark">
@@ -15,27 +25,21 @@ const QuestionDropdown = () => {
           Interview Question
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
-          <li>
-            <Link className="dropdown-item" to="/SelectOnDemand">
-              Select opton on demand
-            </Link>
-            <Link className="dropdown-item" to="/QuestionQuiz">
-              Question quiz
-            </Link>
-            <Link className="dropdown-item" to="/UseState">
-              Counter App
-            </Link>
-            <li>
-              <Link
-                className="dropdown-item"
-                to="/hooksUseStateCustom"
-                data-bs-toggle="tooltip"
-                data-bs-title="Disabled tooltip"
-              >
-                use state hooks example
-              </Link>
-            </li>
-          </li>
+          {QuestionDropDownList.map((listItem, index) => {
+            return (
+              <li key={`hooks-item-${index}`}>
+                <Link
+                  key={`hooks-item-link-${index}`}
+                  className="dropdown-item"
+                  to={listItem.to}
+                  data-bs-toggle="tooltip"
+                  data-bs-title={listItem.title}
+                >
+                  {listItem.text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </Fragment>
