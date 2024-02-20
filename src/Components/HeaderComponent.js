@@ -30,7 +30,7 @@ const HeaderComponent = () => {
                 </Link>
               </li>
             </ul>
-
+            {/* Interview Question Example dropdown starts here */}
             <div className="dropdown m-2" data-bs-theme="dark">
               <button
                 className="btn btn-secondary dropdown-toggle"
@@ -63,10 +63,10 @@ const HeaderComponent = () => {
                   </Link>
                   <li>
                     <Link
-                        className="dropdown-item"
-                        to="/hooksUseStateCustom"
-                        data-bs-toggle="tooltip"
-                        data-bs-title="Disabled tooltip"
+                      className="dropdown-item"
+                      to="/hooksUseStateCustom"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Disabled tooltip"
                     >
                       use state hooks example
                     </Link>
@@ -74,6 +74,7 @@ const HeaderComponent = () => {
                 </li>
               </ul>
             </div>
+            {/* Hooks example dropdown starts here */}
             <div className="dropdown m-2" data-bs-theme="dark">
               <button
                 className="btn btn-secondary dropdown-toggle"
@@ -101,12 +102,22 @@ const HeaderComponent = () => {
                 </li>
                 <li>
                   <Link
-                      className="dropdown-item"
-                      to="/hooksUseStateCustom"
-                      data-bs-toggle="tooltip"
-                      data-bs-title="Disabled tooltip"
+                    className="dropdown-item"
+                    to="/hooksUseStateCustom"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="Disabled tooltip"
                   >
                     use state custom hooks example
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="dropdown-item"
+                    to="/hooksUseEffect"
+                    data-bs-toggle="tooltip"
+                    data-bs-title="Disabled tooltip"
+                  >
+                    use Effect on counter
                   </Link>
                 </li>
               </ul>

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AboutComponent from "./Components/AboutComponent";
 import UseStateComponent from "./Hooks/UseStateHook";
 import UseStateCustomHookComponent from "./Hooks/UseStateCustomHook";
+import UseEffectHook from "./Hooks/UseEffectHook";
 import { useEffect } from "react";
 
 function App() {
@@ -45,10 +46,8 @@ function App() {
             element={<UseStateComponent></UseStateComponent>}
           ></Route>
           <Route
-            path="/hooksUseStateCustom"
-            element={
-              <UseStateCustomHookComponent></UseStateCustomHookComponent>
-            }
+            path="/hooksUseEffect"
+            element={<UseEffectHook></UseEffectHook>}
           ></Route>
         </Routes>
       </div>
