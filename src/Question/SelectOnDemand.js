@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 
-const InterviewQuestionSelectOnDemand = () => {
+const SelectOnDemand = () => {
   const [selectedCounty, setSelectedCounty] = useState("INDIA");
   const [city, setSelectedCity] = useState([]);
   useEffect(() => {
@@ -82,11 +82,11 @@ const InterviewQuestionSelectOnDemand = () => {
 
   return (
     <Fragment>
-      <h1>interviewQuestionSelectOnDemand</h1>
+      <h1> Interview Question - SelectOnDemand</h1>
       <hr></hr>
       {prepareContryDropDown()}
       {prepareCountySpecificCityDropDown()}
     </Fragment>
   );
 };
-export default InterviewQuestionSelectOnDemand;
+export default SelectOnDemand;

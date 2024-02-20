@@ -1,13 +1,14 @@
 import "./App.css";
-import QuestionList from "./Question/QuestionList";
 import HeaderComponent from "./Components/HeaderComponent";
 import WelcomeComponent from "./Components/WelcomeComponent";
-import InterviewQuestionSelectOnDemand from "./Question/InterviewQuestionSelectOnDemand";
+import { SelectOnDemand, QuestionQuiz } from "./Question";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AboutComponent from "./Components/AboutComponent";
-import UseStateComponent from "./Hooks/UseStateHook";
-import UseStateCustomHookComponent from "./Hooks/UseStateCustomHook";
-import UseEffectHook from "./Hooks/UseEffectHook";
+import {
+  UseStateHookExample,
+  UseEffectHook,
+  UseStateCustomHookComponent,
+} from "./Hooks";
 import { useEffect } from "react";
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
         <HeaderComponent></HeaderComponent>
         <Routes>
           <Route
-            path="/interviewQuestionsQuiz"
-            element={<QuestionList></QuestionList>}
+            path="/QuestionQuiz"
+            element={<QuestionQuiz></QuestionQuiz>}
           ></Route>
           <Route
             path="/about"
@@ -32,22 +33,26 @@ function App() {
             element={<WelcomeComponent></WelcomeComponent>}
           ></Route>
           <Route
-            path="/interviewQuestionSelectOnDemand"
-            element={
-              <InterviewQuestionSelectOnDemand></InterviewQuestionSelectOnDemand>
-            }
+            path="/SelectOnDemand"
+            element={<SelectOnDemand></SelectOnDemand>}
           ></Route>
           <Route
             path="/interviewQuestionCounterApp"
-            element={<UseStateComponent></UseStateComponent>}
+            element={<UseStateHookExample></UseStateHookExample>}
           ></Route>
           <Route
             path="/hooksUsestate"
-            element={<UseStateComponent></UseStateComponent>}
+            element={<UseStateHookExample></UseStateHookExample>}
           ></Route>
           <Route
             path="/hooksUseEffect"
             element={<UseEffectHook></UseEffectHook>}
+          ></Route>
+          <Route
+            path="/hooksUseStateCustom"
+            element={
+              <UseStateCustomHookComponent></UseStateCustomHookComponent>
+            }
           ></Route>
         </Routes>
       </div>

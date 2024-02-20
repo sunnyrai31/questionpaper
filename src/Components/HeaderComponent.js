@@ -46,13 +46,10 @@ const HeaderComponent = () => {
                 aria-labelledby="dropdownMenuButtonDark"
               >
                 <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/interviewQuestionSelectOnDemand"
-                  >
+                  <Link className="dropdown-item" to="/SelectOnDemand">
                     Select opton on demand
                   </Link>
-                  <Link className="dropdown-item" to="/interviewQuestionsQuiz">
+                  <Link className="dropdown-item" to="/QuestionQuiz">
                     Question quiz
                   </Link>
                   <Link
