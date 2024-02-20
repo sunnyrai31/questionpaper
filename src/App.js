@@ -4,10 +4,15 @@ import QuestionList from "./Components/QuestionList";
 import HeaderComponent from "./Components/HeaderComponent";
 import FileUploader from "./Components/FileUploader";
 import WelcomeComponent from "./Components/WelcomeComponent";
+import InterviewQuestionSelectOnDemand from "./Components/InterviewQuestionSelectOnDemand";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AboutComponent from "./Components/AboutComponent";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    // document.title = process.env.REACT_APP_TITLE;
+  }, []);
   return (
     <Router>
       <div className="App">
@@ -25,6 +30,12 @@ function App() {
           <Route
             path="/"
             element={<WelcomeComponent></WelcomeComponent>}
+          ></Route>
+          <Route
+            path="/interviewQuestionSelectOnDemand"
+            element={
+              <InterviewQuestionSelectOnDemand></InterviewQuestionSelectOnDemand>
+            }
           ></Route>
         </Routes>
       </div>

@@ -94,7 +94,7 @@ const QuestionList = () => {
                         onChange={() => handleOptionChange(index, item)}
                       />
                       <label
-                        class="form-check-label"
+                        className="form-check-label"
                         for={`question${index}-${item}`}
                       >
                         {item}
