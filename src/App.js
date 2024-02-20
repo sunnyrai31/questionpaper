@@ -1,8 +1,8 @@
 import "./App.css";
-import QuestionList from "./Components/QuestionList";
+import QuestionList from "./Question/QuestionList";
 import HeaderComponent from "./Components/HeaderComponent";
 import WelcomeComponent from "./Components/WelcomeComponent";
-import InterviewQuestionSelectOnDemand from "./Components/InterviewQuestionSelectOnDemand";
+import InterviewQuestionSelectOnDemand from "./Question/InterviewQuestionSelectOnDemand";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AboutComponent from "./Components/AboutComponent";
 import UseStateComponent from "./Hooks/UseStateHook";
