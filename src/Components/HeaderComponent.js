@@ -29,11 +29,6 @@ const HeaderComponent = () => {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Contact
-                </a>
-              </li>
             </ul>
 
             <div className="dropdown m-2" data-bs-theme="dark">
@@ -66,6 +61,16 @@ const HeaderComponent = () => {
                   >
                     Counter App
                   </Link>
+                  <li>
+                    <Link
+                        className="dropdown-item"
+                        to="/hooksUseStateCustom"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="Disabled tooltip"
+                    >
+                      use state hooks example
+                    </Link>
+                  </li>
                 </li>
               </ul>
             </div>
@@ -92,6 +97,16 @@ const HeaderComponent = () => {
                     data-bs-title="Disabled tooltip"
                   >
                     use state hooks example
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                      className="dropdown-item"
+                      to="/hooksUseStateCustom"
+                      data-bs-toggle="tooltip"
+                      data-bs-title="Disabled tooltip"
+                  >
+                    use state custom hooks example
                   </Link>
                 </li>
               </ul>
