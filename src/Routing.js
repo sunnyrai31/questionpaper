@@ -7,6 +7,7 @@ import {
   UseEffectHook,
   UseStateCustomHook,
   UseRefHook,
+  UseMemoHook,
 } from "./Hooks";
 import { Route, Routes } from "react-router-dom";
 
@@ -21,6 +22,7 @@ const Routing = () => {
     { path: "/hooksUseEffect", componentName: UseEffectHook },
     { path: "/hooksUseStateCustom", componentName: UseStateCustomHook },
     { path: "/hooksUseRef", componentName: UseRefHook },
+    { path: "/hooksUseMemo", componentName: UseMemoHook },
   ];
   return (
     <Fragment>
