@@ -9,6 +9,7 @@ const HooksDropdown = () => {
       title: "",
     },
     { text: "use Effect on counter", to: "/hooksUseEffect", title: "" },
+    { text: "use Ref on button/Input", to: "/hooksUseRef", title: "" },
   ];
   return (
     <Fragment>

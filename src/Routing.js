@@ -2,7 +2,12 @@ import { Fragment } from "react";
 import WelcomeComponent from "./Components/WelcomeComponent";
 import AboutComponent from "./Components/AboutComponent";
 import { SelectOnDemand, QuestionQuiz } from "./Question";
-import { UseStateHook, UseEffectHook, UseStateCustomHook } from "./Hooks";
+import {
+  UseStateHook,
+  UseEffectHook,
+  UseStateCustomHook,
+  UseRefHook,
+} from "./Hooks";
 import { Route, Routes } from "react-router-dom";
 
 const Routing = () => {
@@ -15,6 +20,7 @@ const Routing = () => {
     { path: "/hooksUsestate", componentName: UseStateHook },
     { path: "/hooksUseEffect", componentName: UseEffectHook },
     { path: "/hooksUseStateCustom", componentName: UseStateCustomHook },
+    { path: "/hooksUseRef", componentName: UseRefHook },
   ];
   return (
     <Fragment>

@@ -3,6 +3,7 @@ import HeaderComponent from "./Components/HeaderComponent";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useEffect } from "react";
 import Routing from "./Routing";
+import TestComponent from "./Test";
 
 function App() {
   useEffect(() => {
