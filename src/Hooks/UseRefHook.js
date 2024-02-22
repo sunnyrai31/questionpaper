@@ -12,8 +12,9 @@ const UseRefHook = () => {
       <input
         type="text"
         ref={_ref}
+        style={{ width: "300px" }}
         className="input-text m-2"
-        placeholder="enter any value"
+        placeholder="click on the button to see focus here"
       />
       <button className="btn btn-primary m-2" onClick={handleButtonClick}>
         focus input{" "}
