@@ -17,7 +17,7 @@ const UseRefHook = () => {
         placeholder="click on the button to see focus here"
       />
       <button className="btn btn-primary m-2" onClick={handleButtonClick}>
-        focus input{" "}
+        focus input
       </button>
     </Fragment>
   );
