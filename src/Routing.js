@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import WelcomeComponent from "./Components/WelcomeComponent";
 import AboutComponent from "./Components/AboutComponent";
-import { SelectOnDemand, QuestionQuiz } from "./Question";
+import { SelectOnDemand, QuestionQuiz, QuestionDeleteItem } from "./Question";
 import {
   UseStateHook,
   UseEffectHook,
@@ -15,6 +15,7 @@ const Routing = () => {
   const routingDetails = [
     { path: "/", componentName: WelcomeComponent },
     { path: "/about", componentName: AboutComponent },
+    { path: "/QuestionDeleteItem", componentName: QuestionDeleteItem },
     { path: "/QuestionQuiz", componentName: QuestionQuiz },
     { path: "/SelectOnDemand", componentName: SelectOnDemand },
     { path: "/UseState", componentName: UseStateHook },

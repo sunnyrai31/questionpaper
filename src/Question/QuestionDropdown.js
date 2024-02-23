@@ -11,6 +11,11 @@ const QuestionDropdown = () => {
     },
     { text: "Counter App", to: "/UseState", title: "" },
     { text: "use state hooks example", to: "hooksUseStateCustom", title: "" },
+    {
+      text: "Delete list item on demand",
+      to: "/QuestionDeleteItem",
+      title: "",
+    },
   ];
   return (
     <Fragment>
