@@ -1,4 +1,4 @@
-import react, { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useState } from "react";
 
 const QuestionList = () => {
   const QuestionListArr = [
@@ -24,7 +24,7 @@ const QuestionList = () => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [timer, setTimer] = useState(120);
-  const [timerId, setTimerId] = useState(0);
+  // const [timerId, setTimerId] = useState(0);
 
   const handleOptionChange = (index, value) => {
     const newSelectedAnswers = [...selectedAns];

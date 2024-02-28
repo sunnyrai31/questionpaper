@@ -8,6 +8,7 @@ import {
   UseStateCustomHook,
   UseRefHook,
   UseMemoHook,
+  CreateContextParent,
 } from "./Hooks";
 import { Route, Routes } from "react-router-dom";
 
@@ -24,6 +25,7 @@ const Routing = () => {
     { path: "/hooksUseStateCustom", componentName: UseStateCustomHook },
     { path: "/hooksUseRef", componentName: UseRefHook },
     { path: "/hooksUseMemo", componentName: UseMemoHook },
+    { path: "/hooksContext", componentName: CreateContextParent },
   ];
   return (
     <Fragment>

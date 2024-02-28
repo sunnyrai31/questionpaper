@@ -12,7 +12,7 @@ const UseEffectHook = () => {
   };
   useEffect(() => {
     setCounterEffect(counter);
-  }, [toggle]);
+  }, [toggle, counter]);
 
   return (
     <Fragment>

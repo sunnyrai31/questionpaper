@@ -11,6 +11,7 @@ const HooksDropdown = () => {
     { text: "use Effect on counter", to: "/hooksUseEffect", title: "" },
     { text: "use Ref on button/Input", to: "/hooksUseRef", title: "" },
     { text: "use Memo example", to: "/hooksUseMemo", title: "" },
+    { text: "Context API example", to: "/hooksContext", title: "" },
   ];
   return (
     <Fragment>
