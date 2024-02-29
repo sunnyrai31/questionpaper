@@ -16,6 +16,11 @@ const QuestionDropdown = () => {
       to: "/QuestionDeleteItem",
       title: "",
     },
+    {
+      text: "Infinite Scroll",
+      to: "/InfinteScroll",
+      title: "",
+    },
   ];
   return (
     <Fragment>
