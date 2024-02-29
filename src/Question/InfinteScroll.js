@@ -1,29 +1,34 @@
 import { Fragment, useEffect, useState } from "react";
 const InfinteScroll = () => {
   const [data, setData] = useState([]);
-  const [isLoading, setLaoding] = useState(false);
+  const [isLoading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const recordLimit = 15;
+  const recordsPerPage = 15;
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    setLaoding(true);
-    const data = await fetch(
-      `https://jsonplaceholder.typicode.com/comments?_page=${currentPage}&_limit=${recordLimit}`
-    ).then((response) => {
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        `https://jsonplaceholder.typicode.com/comments?_page=${currentPage}&_limit=${recordsPerPage}`
+      );
+
       if (!response.ok) {
-        throw new Error("sonmthing went wrong");
-      } else {
-        return response.json();
+        throw new Error("Something went wrong");
       }
-    });
-    setCurrentPage((prev) => prev + 1);
-    setData(data);
-    setLaoding(false);
-    return data;
+
+      const newData = await response.json();
+      setData((prevData) => [...prevData, ...newData]);
+      setCurrentPage((prevPage) => prevPage + 1);
+    } catch (error) {
+      console.error("Error fetching data:", error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleScroll = () => {
@@ -40,7 +45,7 @@ const InfinteScroll = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [data]);
+  }, [data, isLoading]);
 
   return (
     <Fragment>
@@ -77,8 +82,8 @@ const InfinteScroll = () => {
             </div>
           );
         })}
-        {isLoading && <p>Loading....</p>}
       </div>
+      {isLoading && <p>Loading....</p>}
     </Fragment>
   );
 };
