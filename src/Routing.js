@@ -6,6 +6,7 @@ import {
   QuestionQuiz,
   QuestionDeleteItem,
   InfinteScroll,
+  ContactBook,
 } from "./Question";
 import {
   UseStateHook,
@@ -24,6 +25,7 @@ const Routing = () => {
     { path: "/QuestionDeleteItem", componentName: QuestionDeleteItem },
     { path: "/QuestionQuiz", componentName: QuestionQuiz },
     { path: "/InfinteScroll", componentName: InfinteScroll },
+    { path: "/ContactBook", componentName: ContactBook },
     { path: "/SelectOnDemand", componentName: SelectOnDemand },
     { path: "/UseState", componentName: UseStateHook },
     { path: "/hooksUsestate", componentName: UseStateHook },

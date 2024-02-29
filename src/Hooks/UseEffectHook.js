@@ -12,7 +12,7 @@ const UseEffectHook = () => {
   };
   useEffect(() => {
     setCounterEffect(counter);
-  }, [toggle, counter]);
+  }, [toggle]);
 
   return (
     <Fragment>
@@ -28,12 +28,11 @@ const UseEffectHook = () => {
         <label>counter Effect {counterEffect}</label>
       </p>
       <span>
-        <button onClick={handleToggleClick} ß className="btn btn-primary">
+        <button onClick={handleToggleClick} className="btn btn-primary">
           {!toggle ? "showEffect" : "re-render"}
         </button>
         <button className="btn btn-primary m-2" onClick={handleButtonClick}>
-          {" "}
-          Increment{" "}
+          Increment
         </button>
       </span>
     </Fragment>
