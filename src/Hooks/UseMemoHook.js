@@ -51,7 +51,7 @@ const UseMemoHook = () => {
   }
   // lets create a bug and seek the need to use memo. if we use this code inside the handleInputChange, we dont need useMemo. about
   // but again this is use case. to compoute some at common place but not on any event.
-  //   const nthPrime = findNthPrime(primeValue); // here we can see that on button click findNthPrime is being called
+  // const nthPrime = findNthPrime(primeValue); // here we can see that on button click findNthPrime is being called
   // now lets use the useMemo and fix this problem. by memorizing the nth prime number
   // after comment this above line @54, we need to write like this for memo
 
