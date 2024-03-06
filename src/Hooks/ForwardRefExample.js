@@ -176,7 +176,7 @@ export const ChildComponent = forwardRef((props, ref) => {
         key="primary-btn"
         id="primary-btn"
         title="click me will not work at this point of time because of useImperativeHandle might be causing issue. 
-        \n so please avoid it. to make this work you need to remove the above functionality which changes the state of child, which is expose by useImperativeHandle."
+        so please avoid it. to make this work you need to remove the above functionality which changes the state of child, which is expose by useImperativeHandle."
       >
         {props.btnText}
       </button>
