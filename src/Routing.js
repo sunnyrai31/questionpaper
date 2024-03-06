@@ -8,6 +8,9 @@ import {
   InfinteScroll,
   ContactBook,
   StartStop,
+  GridLayout,
+  FlexLayout,
+  NewFold,
 } from "./Question";
 import {
   UseStateHook,
@@ -27,6 +30,9 @@ const Routing = () => {
     { path: "/QuestionQuiz", componentName: QuestionQuiz },
     { path: "/StartStop", componentName: StartStop },
     { path: "/InfinteScroll", componentName: InfinteScroll },
+    { path: "GridLayout", componentName: GridLayout },
+    { path: "/NewFold", componentName: NewFold },
+    { path: "FlexLayout", componentName: FlexLayout },
     { path: "/ContactBook", componentName: ContactBook },
     { path: "/SelectOnDemand", componentName: SelectOnDemand },
     { path: "/UseState", componentName: UseStateHook },

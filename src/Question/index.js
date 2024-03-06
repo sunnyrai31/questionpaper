@@ -5,3 +5,6 @@ export { default as QuestionDeleteItem } from "./QuestionDeleteItem";
 export { default as InfinteScroll } from "./InfinteScroll";
 export { default as ContactBook } from "./ContactBook";
 export { default as StartStop } from "./StartStop";
+export { default as GridLayout } from "./GridLayout";
+export { default as FlexLayout } from "./FlexLayout";
+export { default as NewFold } from "./NewFold";

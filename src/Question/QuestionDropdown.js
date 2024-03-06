@@ -31,6 +31,21 @@ const QuestionDropdown = () => {
       to: "/StartStop",
       title: "",
     },
+    {
+      text: "Design Grid Layout ",
+      to: "/GridLayout",
+      title: "",
+    },
+    {
+      text: "Design Flex Layout ",
+      to: "/FlexLayout",
+      title: "",
+    },
+    {
+      text: "lazy loading on demand (New Fold Digital) ",
+      to: "/NewFold",
+      title: "",
+    },
   ];
   return (
     <Fragment>
