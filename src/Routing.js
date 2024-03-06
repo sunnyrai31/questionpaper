@@ -19,6 +19,7 @@ import {
   UseRefHook,
   UseMemoHook,
   CreateContextParent,
+  ForwardRefExample,
 } from "./Hooks";
 import { Route, Routes } from "react-router-dom";
 
@@ -42,6 +43,7 @@ const Routing = () => {
     { path: "/hooksUseRef", componentName: UseRefHook },
     { path: "/hooksUseMemo", componentName: UseMemoHook },
     { path: "/hooksContext", componentName: CreateContextParent },
+    { path: "/ForwardRefExample", componentName: ForwardRefExample },
   ];
   return (
     <Fragment>

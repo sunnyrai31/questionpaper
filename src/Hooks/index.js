@@ -5,3 +5,4 @@ export { default as HooksDropdown } from "./HooksDropdown";
 export { default as UseRefHook } from "./UseRefHook";
 export { default as UseMemoHook } from "./UseMemoHook";
 export { default as CreateContextParent } from "./CreateContextParent";
+export { default as ForwardRefExample } from "./ForwardRefExample";

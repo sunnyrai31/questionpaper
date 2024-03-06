@@ -12,6 +12,7 @@ const HooksDropdown = () => {
     { text: "use Ref on button/Input", to: "/hooksUseRef", title: "" },
     { text: "use Memo example", to: "/hooksUseMemo", title: "" },
     { text: "Context API example", to: "/hooksContext", title: "" },
+    { text: "ForwardRefExample example", to: "/ForwardRefExample", title: "" },
   ];
   return (
     <Fragment>
