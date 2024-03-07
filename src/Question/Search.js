@@ -33,6 +33,32 @@ const Search = () => {
     setProductData(filterArr);
   };
 
+  /**
+   * what this function does.
+   * so to avoid the multiple event hit, we are clearing the timeout using clearTimerout,
+   * this is becasue to avoid the mutliple hit.
+   * and  when user stop hitting the key, after 300ms this functin(debounce) will fire the callback (searchItemfn)
+   * and filtered result will come on the screen.
+   * @param {*} callback
+   * @param {*} deplay
+   * @returns
+   *
+   */
+  const debounce = (callback, deplay = 300) => {
+    let timerId;
+    return (...arg) => {
+      console.log("timer will cancel here");
+      clearInterval(timerId);
+      timerId = setTimeout(() => {
+        callback.apply(this, arg);
+      }, deplay);
+    };
+  };
+
+  const debouncedSearchItem = debounce((value) => {
+    SearchItemFn(value);
+  });
+
   const prepareItemList = (data) => {
     return data.map((item) => {
       return (
@@ -59,13 +85,21 @@ const Search = () => {
       <input
         type="text"
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            SearchItemFn(e.target.value);
-          }
+          //   instead of doing like this we can do with the debounce here
+          //   if (e.key === "Enter") {
+          //     SearchItemFn(e.target.value);
+          //   }
+          // now lets see how to achieve seach functionality with debounce.
+          debouncedSearchItem(e.target.value);
         }}
         placeholder="Search your item"
+        style={{
+          width: "25rem",
+          borderRadius: "5px",
+          marginBottom: "20px",
+        }}
       ></input>
-      <div className="data-contaienr">
+      <div className="container">
         <ul>{prepareItemList(productData)}</ul>
       </div>
     </Fragment>
