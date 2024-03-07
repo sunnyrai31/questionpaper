@@ -10,3 +10,4 @@ export { default as FlexLayout } from "./FlexLayout";
 export { default as NewFold } from "./NewFold";
 export { default as Search } from "./Search";
 export { default as debounce } from "./utils";
+export { default as ProgressBar } from "./ProgressBar";

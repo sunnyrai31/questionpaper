@@ -12,6 +12,7 @@ import {
   FlexLayout,
   NewFold,
   Search,
+  ProgressBar,
 } from "./Question";
 import {
   UseStateHook,
@@ -46,6 +47,7 @@ const Routing = () => {
     { path: "/hooksContext", componentName: CreateContextParent },
     { path: "/ForwardRefExample", componentName: ForwardRefExample },
     { path: "/Search", componentName: Search },
+    { path: "/ProgressBar", componentName: ProgressBar },
   ];
   return (
     <Fragment>

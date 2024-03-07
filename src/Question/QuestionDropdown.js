@@ -51,6 +51,11 @@ const QuestionDropdown = () => {
       to: "/Search",
       title: "",
     },
+    {
+      text: "Progress bar implementation",
+      to: "/ProgressBar",
+      title: "",
+    },
   ];
   return (
     <Fragment>
