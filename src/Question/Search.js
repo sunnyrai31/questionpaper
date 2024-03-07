@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useRef } from "react";
 import debounce from "./utils";
 
 const Search = () => {
@@ -26,6 +26,7 @@ const Search = () => {
     },
   ];
   const [productData, setProductData] = useState(data);
+  const _inputRef = useRef(null);
   const SearchItemFn = (searchStr) => {
     const filterArr = data.filter((item) => {
       return item.productName.toLowerCase().includes(searchStr);
@@ -37,6 +38,10 @@ const Search = () => {
   const debouncedSearchItem = debounce((value) => {
     SearchItemFn(value);
   });
+  const handleSearchBtnClick = () => {
+    console.log(_inputRef.current?.value);
+    debouncedSearchItem(_inputRef.current?.value);
+  };
 
   const prepareItemList = (data) => {
     return data.map((item) => {
@@ -63,13 +68,16 @@ const Search = () => {
       <h1> Search Item </h1>
       <input
         type="text"
+        ref={_inputRef}
         onKeyDown={(e) => {
           //   instead of doing like this we can do with the debounce here
-          //   if (e.key === "Enter") {
-          //     SearchItemFn(e.target.value);
-          //   }
+          // now debounce is applied on button click based search.
+          if (e.key === "Enter") {
+            SearchItemFn(e.target.value);
+          }
+          // uncomment above code to perform debouncing on key press based search
           // now lets see how to achieve seach functionality with debounce.
-          debouncedSearchItem(e.target.value);
+          //   debouncedSearchItem(e.target.value);
         }}
         placeholder="Search your item"
         style={{
@@ -78,6 +86,9 @@ const Search = () => {
           marginBottom: "20px",
         }}
       ></input>
+      <button onClick={handleSearchBtnClick} className="btn btn-primary m-2">
+        Search
+      </button>
       <div className="container">
         <ul>{prepareItemList(productData)}</ul>
       </div>
