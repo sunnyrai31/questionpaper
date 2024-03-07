@@ -70,14 +70,7 @@ const Search = () => {
         type="text"
         ref={_inputRef}
         onKeyDown={(e) => {
-          //   instead of doing like this we can do with the debounce here
-          // now debounce is applied on button click based search.
-          if (e.key === "Enter") {
-            SearchItemFn(e.target.value);
-          }
-          // uncomment above code to perform debouncing on key press based search
-          // now lets see how to achieve seach functionality with debounce.
-          //   debouncedSearchItem(e.target.value);
+          debouncedSearchItem(e.target.value);
         }}
         placeholder="Search your item"
         style={{
