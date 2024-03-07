@@ -15,9 +15,9 @@ const ProgressBar = () => {
   const increaseProgressBar = () => {
     timerId = setTimeout(() => {
       setWidth((prev) => {
-        return ((prev + 10) / 100) * 100;
+        return (Math.round(prev + 1) / 100) * 100;
       });
-    }, 2000);
+    }, 400);
   };
   const resetProgressBar = () => {
     setWidth(0);
