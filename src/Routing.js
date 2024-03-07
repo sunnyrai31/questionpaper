@@ -11,6 +11,7 @@ import {
   GridLayout,
   FlexLayout,
   NewFold,
+  Search,
 } from "./Question";
 import {
   UseStateHook,
@@ -44,6 +45,7 @@ const Routing = () => {
     { path: "/hooksUseMemo", componentName: UseMemoHook },
     { path: "/hooksContext", componentName: CreateContextParent },
     { path: "/ForwardRefExample", componentName: ForwardRefExample },
+    { path: "/Search", componentName: Search },
   ];
   return (
     <Fragment>

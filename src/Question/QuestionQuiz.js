@@ -34,7 +34,7 @@ const QuestionList = () => {
   const calculateScore = (e) => {
     setShowResult(true);
     e.preventDefault();
-    QuestionListArr.map((question, index) => {
+    QuestionListArr.forEach((question, index) => {
       if (question.correctans === selectedAns[index]) {
         setScore((prevScore) => prevScore + 1);
       }

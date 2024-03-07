@@ -8,3 +8,4 @@ export { default as StartStop } from "./StartStop";
 export { default as GridLayout } from "./GridLayout";
 export { default as FlexLayout } from "./FlexLayout";
 export { default as NewFold } from "./NewFold";
+export { default as Search } from "./Search";
