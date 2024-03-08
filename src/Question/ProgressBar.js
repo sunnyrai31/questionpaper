@@ -10,6 +10,7 @@ import { Fragment, useEffect, useState } from "react";
 
 const ProgressBar = () => {
   const [width, setWidth] = useState(0);
+  const [pause, setPause] = useState(null);
   let timerId;
 
   const increaseProgressBar = () => {
@@ -25,14 +26,28 @@ const ProgressBar = () => {
   };
 
   useEffect(() => {
-    console.log(width);
     if (width < 100) {
       increaseProgressBar();
     }
     return () => {
       clearTimeout(timerId);
     };
-  }, [width, timerId]);
+  }, [width]);
+
+  useEffect(() => {
+    if (!pause) {
+      increaseProgressBar();
+    }
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [pause]);
+
+  const pauseProgressBar = () => {
+    const _preResumeState = pause;
+    setPause(!_preResumeState);
+    clearTimeout(timerId);
+  };
 
   return (
     <Fragment>
@@ -62,6 +77,9 @@ const ProgressBar = () => {
       </div>
       <button onClick={resetProgressBar} className="btn btn-danger m-2">
         re-start
+      </button>
+      <button className="btn btn-secondary" onClick={pauseProgressBar}>
+        {pause === null ? "pause" : pause === true ? "resume" : "pause"}
       </button>
     </Fragment>
   );
