@@ -56,6 +56,11 @@ const QuestionDropdown = () => {
       to: "/ProgressBar",
       title: "",
     },
+    {
+      text: "Comment Widget",
+      to: "/CommentWidget",
+      title: "",
+    },
   ];
   return (
     <Fragment>

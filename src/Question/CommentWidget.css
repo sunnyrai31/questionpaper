@@ -1,0 +1,41 @@
+/* CommentWidget.css */
+
+.comment-widget {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+}
+
+.comment {
+    margin-left: 20px;
+    border-left: 2px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.replies {
+    margin-left: 20px;
+}
+
+.reply-input {
+    margin-top: 10px;
+}
+
+.comments {
+    list-style: none;
+    padding: 0;
+}
+
+.add-comment {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+ul {
+    padding: 0;
+}

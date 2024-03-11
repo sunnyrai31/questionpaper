@@ -3,7 +3,8 @@ import HeaderComponent from "./Components/HeaderComponent";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useEffect } from "react";
 import Routing from "./Routing";
-import TestComponent from "./Test";
+import { Provider } from "react-redux";
+import store from "./Store/redux-store";
 
 function App() {
   useEffect(() => {
@@ -11,10 +12,12 @@ function App() {
   }, []);
   return (
     <Router>
-      <div className="App">
-        <HeaderComponent></HeaderComponent>
-        <Routing></Routing>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <HeaderComponent></HeaderComponent>
+          <Routing></Routing>
+        </div>
+      </Provider>
     </Router>
   );
 }

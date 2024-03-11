@@ -11,3 +11,4 @@ export { default as NewFold } from "./NewFold";
 export { default as Search } from "./Search";
 export { default as debounce } from "./utils";
 export { default as ProgressBar } from "./ProgressBar";
+export { default as CommentWidget } from "./CommentWidget";

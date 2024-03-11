@@ -13,6 +13,7 @@ import {
   NewFold,
   Search,
   ProgressBar,
+  CommentWidget,
 } from "./Question";
 import {
   UseStateHook,
@@ -48,6 +49,7 @@ const Routing = () => {
     { path: "/ForwardRefExample", componentName: ForwardRefExample },
     { path: "/Search", componentName: Search },
     { path: "/ProgressBar", componentName: ProgressBar },
+    { path: "/CommentWidget", componentName: CommentWidget },
   ];
   return (
     <Fragment>

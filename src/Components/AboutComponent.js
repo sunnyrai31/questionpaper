@@ -1,10 +1,10 @@
-import { Fragment } from "react";
-import { AboutMsg } from "../Data/aboutMessage";
+import { useSelector } from "react-redux";
 const AboutComponent = () => {
+  const userName = useSelector((state) => state.user.firstName);
   return (
     <div id="#aboutPage">
       <header>
-        <h1>About Question paper</h1>
+        <h1>About Question paper ::: {userName}</h1>
         <hr />
       </header>
 
